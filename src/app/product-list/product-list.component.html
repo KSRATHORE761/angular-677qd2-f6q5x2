@@ -13,10 +13,11 @@ can be found in the LICENSE file at https://angular.io/license
   <div *ngIf="product.description">
     <p>{{ product.description }}</p>
   </div>
-  <div>
-    <button type="button"><Hi/button>
-    <!-- <app-product-alerts></app-product-alerts> -->
-  </div>
-  <!-- <app-product-alerts [product]="product"></app-product-alerts> -->
   <button type="button" (click)="share()">Share</button>
+  <br />
+  <br />
+  <app-product-alerts
+    [product]="product"
+    (notify)="onNotify()"
+  ></app-product-alerts>
 </div>
